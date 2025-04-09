@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Booking Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0 20px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .packages {
+            display: none;
+        }
+        .paris, .london, .new_york, .tokyo, .sydney {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Travel Booking Form</h2>
+    <form action="submit.html" method="GET"> <!-- Modify action to link to submit.html -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="destination">Destination:</label>
+        <select id="destination" name="destination" required>
+            <option value="">Select a Destination</option>
+            <option value="paris">Paris</option>
+            <option value="london">London</option>
+            <option value="new_york">New York</option>
+            <option value="tokyo">Tokyo</option>
+            <option value="sydney">Sydney</option>
+        </select>
+
+        <div class="packages paris">
+            <label for="paris-package">Available Paris Packages:</label>
+            <select id="paris-package" name="paris-package">
+                <option value="paris-tour">Paris Tour</option>
+                <option value="paris-luxury">Luxury Paris</option>
+            </select>
+        </div>
+
+        <div class="packages london">
+            <label for="london-package">Available London Packages:</label>
+            <select id="london-package" name="london-package">
+                <option value="london-tour">London Tour</option>
+                <option value="london-luxury">Luxury London</option>
+            </select>
+        </div>
+
+        <div class="packages new_york">
+            <label for="new_york-package">Available New York Packages:</label>
+            <select id="new_york-package" name="new_york-package">
+                <option value="nyc-tour">NYC Tour</option>
+                <option value="nyc-luxury">Luxury NYC</option>
+            </select>
+        </div>
+
+        <div class="packages tokyo">
+            <label for="tokyo-package">Available Tokyo Packages:</label>
+            <select id="tokyo-package" name="tokyo-package">
+                <option value="tokyo-tour">Tokyo Tour</option>
+                <option value="tokyo-luxury">Luxury Tokyo</option>
+            </select>
+        </div>
+
+        <div class="packages sydney">
+            <label for="sydney-package">Available Sydney Packages:</label>
+            <select id="sydney-package" name="sydney-package">
+                <option value="sydney-tour">Sydney Tour</option>
+                <option value="sydney-luxury">Luxury Sydney</option>
+            </select>
+        </div>
+
+        <label for="comments">Additional Requests or Comments:</label>
+        <textarea id="comments" name="comments" rows="4" placeholder="Any special requests?"></textarea>
+
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('destination').addEventListener('change', function () {
+        const selectedDestination = this.value;
+        const packageDivs = document.querySelectorAll('.packages');
+        
+        packageDivs.forEach(function (div) {
+            div.style.display = 'none'; // Hide all package options
+        });
+
+        if (selectedDestination) {
+            document.querySelector(`.${selectedDestination}`).style.display = 'block'; 
+        }
+    });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Packages</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .package {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .package-card {
+            background-color: #fff;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .package-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .package-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .package-card h3 {
+            color: #333;
+        }
+        .package-card p {
+            font-size: 16px;
+            color: #777;
+        }
+        .package-card .price {
+            font-size: 18px;
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Explore Our Travel Packages</h1>
+    <p>Choose your dream destination and enjoy an unforgettable adventure!</p>
+</header>
+
+<div class="container">
+    <div class="package">
+        <div class="package-card">
+            <img src="https://via.placeholder.com/400x250" alt="Paris Tour">
+            <h3>Paris City Tour</h3>
+            <p>Explore the romantic city of Paris with iconic landmarks like the Eiffel Tower, Louvre, and more.</p>
+            <p><strong>Duration:</strong> 5 Days</p>
+            <p class="price">$1,500</p>
+        </div>
+        <div class="package-card">
+            <img src="https://via.placeholder.com/400x250" alt="London Tour">
+            <h3>London & Oxford Tour</h3>
+            <p>Discover the historic charm of London and the picturesque town of Oxford in this delightful tour.</p>
+            <p><strong>Duration:</strong> 7 Days</p>
+            <p class="price">$2,000</p>
+        </div>
+        <div class="package-card">
+            <img src="https://via.placeholder.com/400x250" alt="New York Tour">
+            <h3>New York City Extravaganza</h3>
+            <p>Explore the bright lights and excitement of New York City, including a Broadway show and Central Park.</p>
+            <p><strong>Duration:</strong> 6 Days</p>
+            <p class="price">$1,800</p>
+        </div>
+    </div>
+
+    <div class="package">
+        <div class="package-card">
+            <img src="https://via.placeholder.com/400x250" alt="Tokyo Tour">
+            <h3>Tokyo Adventure</h3>
+            <p>Immerse yourself in the culture, technology, and cuisine of Tokyo with a guided city tour.</p>
+            <p><strong>Duration:</strong> 5 Days</p>
+            <p class="price">$1,700</p>
+        </div>
+        <div class="package-card">
+            <img src="https://via.placeholder.com/400x250" alt="Sydney Tour">
+            <h3>Sydney & Great Barrier Reef</h3>
+            <p>Experience the stunning sights of Sydney, followed by an unforgettable visit to the Great Barrier Reef.</p>
+            <p><strong>Duration:</strong> 8 Days</p>
+            <p class="price">$2,500</p>
+        </div>
+        <div class="package-card">
+            <img src="https://via.placeholder.com/400x250" alt="Rome Tour">
+            <h3>Rome & Vatican Tour</h3>
+            <p>Step back in time with a tour through the ancient city of Rome and the Vatican's rich history.</p>
+            <p><strong>Duration:</strong> 6 Days</p>
+            <p class="price">$2,200</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 Travel Adventures | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>

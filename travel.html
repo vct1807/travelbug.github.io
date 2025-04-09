@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Travel Bug - Explore the World</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body, html {
+            height: 100%;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        header {
+            position: relative;
+            height: 100vh;
+            background: url('https://th.bing.com/th/id/R.401b4b4660b101955fc92cc689666ce9?rik=CsViwbliF7crzQ&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2f1%2f9%2f1%2f805044-scenery-background-1920x1200-desktop.jpg&ehk=EEDn3M5mAO%2fE105V9JTqS6aGhzQSlJQIkxggVPsE%2ftE%3d&risl=&pid=ImgRaw&r=0') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 4em;
+            margin-bottom: 10px;
+        }
+
+        header nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.2em;
+            letter-spacing: 1px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        header nav a:hover {
+            color: #ffcc00;
+            text-decoration: underline;
+        }
+
+        header .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        header nav {
+            position: relative;
+            z-index: 10;
+        }
+
+        section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .packages {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .package {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .package:hover {
+            transform: scale(1.05);
+        }
+
+        .package img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .package .content {
+            padding: 20px;
+            text-align: left;
+        }
+
+        .package h3 {
+            font-size: 1.6em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .package p {
+            color: #555;
+            font-size: 1.1em;
+        }
+
+        .package button {
+            background: #ffcc00;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            margin-top: 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .package button:hover {
+            background: #e6b800;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+        }
+
+        .contact-form button {
+            width: 100%;
+            padding: 15px;
+            background-color: #ffcc00;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.3em;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: #e6b800;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="overlay"></div>
+        <h1>Travel Bug</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="package.html">Packages</a>
+            <a href="#about">About</a>
+            <a href="index.html">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h2>Welcome to Travel Bug</h2>
+        <p>Your dream vacation is just a click away. Explore exciting destinations across the globe with Travel Bug!</p>
+    </section>
+
+    <section id="packages">
+        <h2>Explore Our Travel Packages</h2>
+        <div class="packages">
+            <div class="package">
+                <img src="https://via.placeholder.com/600x400" alt="Mountain Adventure">
+                <div class="content">
+                    <h3>Mountain Adventure</h3>
+                    <p>Conquer the highest peaks and enjoy breathtaking landscapes.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="package">
+                <img src="https://via.placeholder.com/600x400" alt="Beach Escape">
+                <div class="content">
+                    <h3>Beach Escape</h3>
+                    <p>Relax on sandy beaches and explore exotic marine life.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+            <div class="package">
+                <img src="https://via.placeholder.com/600x400" alt="City Tour">
+                <div class="content">
+                    <h3>City Tour</h3>
+                    <p>Discover the culture, history, and charm of major cities.</p>
+                    <button>Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Travel Bug</h2>
+        <p>Travel Bug is your ultimate partner for exploring the world. We offer handpicked travel packages to some of the most beautiful destinations on Earth. Whether you seek adventure, relaxation, or culture, we’ve got the perfect trip for you!</p>
+    </section>
+
+   
+
+    <footer>
+        <p>&copy; 2025 Travel Bug. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
